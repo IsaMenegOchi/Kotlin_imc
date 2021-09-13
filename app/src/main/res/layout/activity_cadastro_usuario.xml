@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CadastroUsuarioActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/forma_resultado" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trocar Foto"
+                android:textSize="25sp"
+                android:textColor="@color/pink_200"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold" />
+            <!--    wrap-content: largura do conteudo/texto-->
+
+
+            <!--    PARTE PESO   -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Dados para autenticação"
+                android:textSize="20sp"
+                android:textColor="@color/secao"
+                android:drawableStart="@drawable/ic_lock_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/pink_200"
+                />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_email"
+                android:hint="E-mail"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="30"
+                    android:layout_marginBottom="10dp"
+                 />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_senha"
+                android:hint="Senha"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLength="30"
+                    android:layout_marginBottom="10dp"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--    PARTE - DADOS PESSOAIS   -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Dados pessoais"
+                android:textSize="20sp"
+                android:textColor="@color/secao"
+                android:drawableStart="@drawable/ic_person_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/pink_200"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_nome"
+                android:layout_centerInParent="true"
+                android:hint="Nome"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_profissao"
+                android:hint="Profissão"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"/>
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_altura"
+                android:hint="Altura"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                     />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_input_data_nascimento"
+                android:hint="Data de nascimento"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--    android:textAllCaps="false" - faz com que o conteudo do botao seja da forma que escrevemos realemte-->
+            <!--o android studio ja faz comm que o button tenha uma cor ja pre definida-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sexo"
+                android:textSize="20sp"
+                android:layout_marginBottom="5dp"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Feminino"
+                    android:layout_marginRight="10dp"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino" />
+
+            </RadioGroup>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                
+
+                />
+
+
+            <!--    BOTÃO   -->
+<!--            <Button-->
+<!--                android:id="@+id/button_calcular"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Submeter"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="@drawable/activity_button"-->
+<!--            />-->
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
