@@ -17,21 +17,35 @@
             android:orientation="vertical"
             android:padding="30dp">
 
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+            <androidx.cardview.widget.CardView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                app:cardBackgroundColor="#000fff"
+                app:cardCornerRadius="60dp"
                 android:layout_gravity="center"
-                android:background="@drawable/forma_resultado" />
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/perfil"
+                    android:scaleType="centerCrop"
+
+                    />
+
+
+            </androidx.cardview.widget.CardView>
+
+
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trocar Foto"
-                android:textSize="25sp"
-                android:textColor="@color/pink_200"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:text="Trocar Foto"
+                android:textColor="@color/pink_200"
+                android:textSize="25sp"
                 android:textStyle="bold" />
             <!--    wrap-content: largura do conteudo/texto-->
 
@@ -41,45 +55,41 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Dados para autenticação"
-                android:textSize="20sp"
-                android:textColor="@color/secao"
                 android:drawableStart="@drawable/ic_lock_24"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/pink_200"
-                />
+                android:text="Dados para autenticação"
+                android:textColor="@color/secao"
+                android:textSize="20sp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_input_email"
-                android:hint="E-mail"
-                >
+                android:hint="E-mail">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="30"
                     android:layout_marginBottom="10dp"
-                 />
+                    android:maxLength="30" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_input_senha"
-                android:hint="Senha"
-                >
+                android:hint="Senha">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="30"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp"
+                    android:maxLength="30" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -89,73 +99,66 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Dados pessoais"
-                android:textSize="20sp"
-                android:textColor="@color/secao"
                 android:drawableStart="@drawable/ic_person_24"
                 android:drawablePadding="10dp"
                 android:drawableTint="@color/pink_200"
-                />
+                android:text="Dados pessoais"
+                android:textColor="@color/secao"
+                android:textSize="20sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/text_input_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:hint="Nome"
-                >
+                android:hint="Nome">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/text_input_profissao"
-                android:hint="Profissão"
-                >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Profissão">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"/>
+                    android:layout_marginBottom="10dp" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/text_input_altura"
-                android:hint="Altura"
-                >
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Altura">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                     />
+                    android:layout_marginBottom="10dp" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_input_data_nascimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/text_input_data_nascimento"
-                android:hint="Data de nascimento"
-                >
+                android:hint="Data de nascimento">
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    />
+                    android:layout_marginBottom="15dp" />
 
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -165,9 +168,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:text="Sexo"
-                android:textSize="20sp"
-                android:layout_marginBottom="5dp"/>
+                android:textSize="15sp" />
 
             <RadioGroup
                 android:layout_width="match_parent"
@@ -177,8 +180,8 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Feminino"
-                    android:layout_marginRight="10dp"/>
+                    android:layout_marginRight="10dp"
+                    android:text="Feminino" />
 
                 <RadioButton
                     android:layout_width="wrap_content"
@@ -186,26 +189,12 @@
                     android:text="Masculino" />
 
             </RadioGroup>
+
             <View
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                
-
+                android:layout_height="2dp"
+                android:background="#2B2B2B"
                 />
-
-
-            <!--    BOTÃO   -->
-<!--            <Button-->
-<!--                android:id="@+id/button_calcular"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Submeter"-->
-<!--                android:layout_marginTop="24dp"-->
-<!--                android:textColor="@color/white"-->
-<!--                android:background="@drawable/activity_button"-->
-<!--            />-->
-
-
 
 
         </LinearLayout>
