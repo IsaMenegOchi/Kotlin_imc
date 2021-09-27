@@ -4,18 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroUsuarioActivity">
+    tools:context=".CadastroUsuarioActivity"
+    android:orientation="vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
+
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="30dp">
+            android:paddingTop="30dp">
 
             <androidx.cardview.widget.CardView
                 android:layout_width="120dp"
@@ -37,7 +35,6 @@
 
 
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -49,8 +46,20 @@
                 android:textStyle="bold" />
             <!--    wrap-content: largura do conteudo/texto-->
 
-
+        </LinearLayout>
             <!--    PARTE PESO   -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="30dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -158,18 +167,20 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp" />
+                    android:layout_marginBottom="15dp"
+                    android:inputType="date"/>
 
 
             </com.google.android.material.textfield.TextInputLayout>
             <!--    android:textAllCaps="false" - faz com que o conteudo do botao seja da forma que escrevemos realemte-->
             <!--o android studio ja faz comm que o button tenha uma cor ja pre definida-->
 
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
-                android:text="Sexo"
+                android:text="Gênero"
                 android:textSize="15sp" />
 
             <RadioGroup
