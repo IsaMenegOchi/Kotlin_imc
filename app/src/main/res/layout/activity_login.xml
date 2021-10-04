@@ -125,14 +125,32 @@
             android:linksClickable="true"
             android:layout_gravity="end"
             android:layout_marginBottom="10dp"
+            android:textColor="#259EFA"
             />
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:text="Não tem uma conta? Criar uma conta agora"
-            />
+            android:layout_gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Não tem uma conta? "
+                />
+
+            <TextView
+                android:id="@+id/criar_conta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="Criar uma conta agora"
+                android:textColor="#259EFA"
+                />
+        </LinearLayout>
+
+
 
     </LinearLayout>
 

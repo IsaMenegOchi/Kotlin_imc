@@ -8,6 +8,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main) //R de recursos
+
+        supportActionBar!!.hide()
+
         //layout da nossa atividade
         //res de resource
         //responsavel por fazer o layout da tela
