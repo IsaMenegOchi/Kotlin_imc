@@ -72,12 +72,13 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_email"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="E-mail">
 
                 <EditText
+                    android:id="@+id/text_input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -88,12 +89,12 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Senha">
 
                 <EditText
+                    android:id="@+id/text_input_senha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
@@ -115,13 +116,14 @@
                 android:textSize="20sp" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_nome"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:hint="Nome">
 
                 <EditText
+                    android:id="@+id/text_input_nome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp" />
@@ -130,12 +132,13 @@
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_profissao"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Profissão">
 
                 <EditText
+                    android:id="@+id/text_input_profissao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp" />
@@ -144,12 +147,13 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/text_input_altura"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Altura">
 
                 <EditText
+                    android:id="@+id/text_input_altura"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp" />
@@ -185,17 +189,20 @@
                 android:textSize="15sp" />
 
             <RadioGroup
+                android:id="@+id/grupo_genero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <RadioButton
+                    android:id="@+id/radio_fem"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:text="Feminino" />
 
                 <RadioButton
+                    android:id="@+id/radio_masc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Masculino" />

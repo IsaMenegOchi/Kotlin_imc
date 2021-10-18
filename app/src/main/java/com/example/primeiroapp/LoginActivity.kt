@@ -18,5 +18,8 @@ class LoginActivity : AppCompatActivity() {
             startActivity(abrirCadastroUsuarioActivity)
         }
 
+
+
+
     }
 }

@@ -12,14 +12,15 @@
 
 
         <activity android:name=".DashboardActivity"/>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".LoginActivity"/>
+
+        <activity android:name=".CadastroUsuarioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CadastroUsuarioActivity"/>
 
         <activity android:name=".MainActivity" />
     </application>
