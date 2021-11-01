@@ -11,10 +11,10 @@
         android:theme="@style/Theme.PrimeiroApp">
 
 
-        <activity android:name=".DashboardActivity"/>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".ui.DashboardActivity"/>
+        <activity android:name=".ui.LoginActivity"/>
 
-        <activity android:name=".CadastroUsuarioActivity">
+        <activity android:name=".ui.CadastroUsuarioActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
