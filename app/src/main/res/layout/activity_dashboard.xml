@@ -26,6 +26,7 @@
             android:layout_marginVertical="12dp">
 
             <ImageView
+                android:id="@+id/imagem_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/perfil"/>
@@ -33,6 +34,7 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
+            android:id="@+id/nome_dash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Susana Hoffs"
@@ -42,9 +44,9 @@
             />
 
         <TextView
+            android:id="@+id/profissao_dash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Singer"
             android:textSize="15sp"
             android:layout_marginVertical="12dp"
             android:textColor="@color/white"/>
@@ -64,6 +66,7 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/imc_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="25.7"
@@ -89,6 +92,7 @@
             >
 
             <TextView
+                android:id="@+id/dataNascimento_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1980"
@@ -113,6 +117,7 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/idade_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="49"
@@ -137,9 +142,9 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/peso_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="67"
                 android:textSize="25dp"
                 android:textColor="@color/white"
                 />
@@ -161,9 +166,9 @@
             android:layout_weight="1">
 
             <TextView
+                android:id="@+id/altura_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1,70"
                 android:textSize="25dp"
                 android:textColor="@color/white"
                 />

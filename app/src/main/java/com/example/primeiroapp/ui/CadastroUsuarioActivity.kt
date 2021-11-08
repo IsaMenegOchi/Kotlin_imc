@@ -10,10 +10,11 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.*
+import androidx.core.graphics.contains
+import androidx.core.graphics.drawable.toBitmap
 import com.example.primeiroapp.R
 import com.example.primeiroapp.model.Usuario
 import com.example.primeiroapp.util.convertStringToLocalDate
-import java.io.ByteArrayOutputStream
 import java.time.LocalDate
 import java.util.*
 
@@ -52,6 +53,7 @@ class CadastroUsuarioActivity : AppCompatActivity() {
         dataNasc = findViewById(R.id.data_nascimento)
 
 
+        imageBitmap = resources.getDrawable(R.drawable.ic_person_24).toBitmap()
 
         imagemFotoPerfil = findViewById(R.id.imagem_perfil)
 
@@ -131,7 +133,7 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
             )
 
-            //Verifica se tem um arquivo que pedidos, caso ao contrario ele cria
+            //Verifica se tem um arquivo que pedimos, caso ao contrario ele cria
             val dados = getSharedPreferences("usuario", Context.MODE_PRIVATE)
 
             //editor do banquinho de dados
@@ -201,6 +203,10 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
         var valido = true
 
+        if(imageBitmap == null){
+            Toast.makeText(this , "A imagem deve ser enviada", Toast.LENGTH_SHORT).show()
+            valido = false
+        }
         if(email.text.isEmpty()){
             email.error = "Campo email deve ser preenchido"
             valido = false

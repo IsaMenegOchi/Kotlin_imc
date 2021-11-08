@@ -17,7 +17,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                app:cardBackgroundColor="#000fff"
+                app:cardBackgroundColor="#11111100"
                 app:cardCornerRadius="60dp"
                 android:layout_gravity="center"
                 >
@@ -25,7 +25,7 @@
                     android:id="@+id/imagem_perfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/perfil"
+                    android:src="@drawable/ic_person_24"
                     android:scaleType="centerCrop"
 
                     />
