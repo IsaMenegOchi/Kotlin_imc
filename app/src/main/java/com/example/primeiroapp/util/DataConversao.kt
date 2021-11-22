@@ -1,6 +1,7 @@
 package com.example.primeiroapp.util
 
 import java.time.LocalDate
+import java.time.Period
 import java.time.format.DateTimeFormatter
 
 fun convertStringToLocalDate(brazilianDate: String) : LocalDate
@@ -13,3 +14,17 @@ fun convertStringToLocalDate(brazilianDate: String) : LocalDate
 
     return localDateFormat
 }
+
+    fun calcularIdade(dataDeNascimento: String): Int {
+
+        //obter data atual
+        val hoje = LocalDate.now();
+
+        //converter a data de nascimento em local date
+        val arrayNascimento = dataDeNascimento.split("-").toTypedArray() //retorna um array
+        val dataNascimento = LocalDate.of(arrayNascimento[0].toInt(), arrayNascimento[1].toInt(), arrayNascimento[2].toInt())
+
+        val idade = Period.between(dataNascimento, hoje).years.toString();
+        return idade.toInt()
+    }
+

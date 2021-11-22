@@ -92,7 +92,7 @@
             >
 
             <TextView
-                android:id="@+id/dataNascimento_dash"
+                android:id="@+id/ncd_dash"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1980"
@@ -194,6 +194,7 @@
         >
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/card_peso_dash"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="30dp">
@@ -207,14 +208,16 @@
             android:orientation="horizontal">
 
 
-            <ImageView
-                android:layout_width="90dp"
+            <Button
+                android:id="@+id/btPeso"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/controle_peso"
+                android:background="@drawable/controle_peso"
                 />
 
 
             <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -253,10 +256,11 @@
             android:gravity="center"
             >
 
-            <ImageView
-                android:layout_width="90dp"
+            <Button
+                android:id="@+id/btHistorico"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/conquistas"
+                android:background="@drawable/conquistas"
                 />
 
             <LinearLayout
