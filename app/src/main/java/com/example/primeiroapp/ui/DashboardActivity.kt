@@ -22,7 +22,8 @@ lateinit var txtProfissao : TextView
 lateinit var altura : TextView
 lateinit var dataNascimento : TextView
 lateinit var peso : TextView
-lateinit var btPeso : Button
+lateinit var cardPesagem : CardView
+//lateinit var cardNovaPesagem : CardView
 
 class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,14 +37,16 @@ class DashboardActivity : AppCompatActivity() {
         txtNome = findViewById<TextView>(R.id.nome_dash)
         altura = findViewById<TextView>(R.id.altura_dash)
         peso = findViewById<TextView>(R.id.peso_dash)
-        btPeso = findViewById<Button>(R.id.btPeso)
+        cardPesagem = findViewById<CardView>(R.id.card_peso_dash)
+//        cardNovaPesagem = findViewById<CardView>()
 
         carregarDashboard()
 
-        btPeso.setOnClickListener {
+        cardPesagem.setOnClickListener {
             val intent = Intent(this, DataPesagemActivity::class.java)
             startActivity(intent)
         }
+
 
     }
 

@@ -10,6 +10,6 @@ import java.time.LocalDate
             var altura: Double,
             var dataNascimento: LocalDate,
             var profissao: String,
-            var sexo: Char
-//            var fotoPerfil: String
+            var sexo: Char,
+            var fotoPerfil: String
     )

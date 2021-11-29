@@ -28,3 +28,15 @@ fun convertStringToLocalDate(brazilianDate: String) : LocalDate
         return idade.toInt()
     }
 
+    fun dateFormatterToBrazilian() : String
+    {
+        val hoje = LocalDate.now()
+
+        val dateFormatterFromBrazil = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+
+        val dataBrasil = hoje.format(dateFormatterFromBrazil)
+
+        return dataBrasil
+
+    }
+

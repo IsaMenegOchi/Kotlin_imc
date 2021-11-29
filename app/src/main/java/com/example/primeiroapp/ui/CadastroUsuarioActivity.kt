@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.*
 import androidx.core.graphics.contains
@@ -15,6 +16,7 @@ import androidx.core.graphics.drawable.toBitmap
 import com.example.primeiroapp.R
 import com.example.primeiroapp.model.Usuario
 import com.example.primeiroapp.util.convertStringToLocalDate
+import com.example.primeiroapp.util.convertToBitmapToBase64
 import java.time.LocalDate
 import java.util.*
 
@@ -108,6 +110,8 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
         menuInflater.inflate(R.menu.menu_cadastro, menu)
         return true
+
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean{
@@ -128,8 +132,9 @@ class CadastroUsuarioActivity : AppCompatActivity() {
                     altura.text.toString().toDouble(),
                     LocalDate.of(dataNascimento.year, dataNascimento.monthValue, dataNascimento.dayOfMonth),
                     profissao.text.toString(),
-                    if (radioF.isChecked) 'F' else 'M'
-//                    "foto do perfil"
+                    if (radioF.isChecked) 'F' else 'M',
+                    convertToBitmapToBase64(imageBitmap!!)
+
 
             )
 
@@ -150,7 +155,7 @@ class CadastroUsuarioActivity : AppCompatActivity() {
             editor.putString("dataNascimento", usuario.dataNascimento.toString())
             editor.putString("profissao", usuario.profissao)
             editor.putString("sexo", usuario.sexo.toString())
-//            editor.putString("fotoPerfil", usuario.fotoPerfil)
+            editor.putString("fotoPerfil", usuario.fotoPerfil)
 
             //Envia e salva os dados para o arquivo/banquinho
             editor.apply()
@@ -182,7 +187,6 @@ class CadastroUsuarioActivity : AppCompatActivity() {
 
             //colocar o bitmap no imageview
             imagemFotoPerfil.setImageBitmap(imageBitmap)
-
         }
 
     }
