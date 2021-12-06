@@ -9,9 +9,8 @@
         android:roundIcon="@drawable/kcal"
         android:supportsRtl="true"
         android:theme="@style/Theme.PrimeiroApp">
-
-
-        <activity android:name=".ui.DashboardActivity"/>
+        <activity android:name=".ui.HistoricoActivity"></activity>
+        <activity android:name=".ui.DashboardActivity" />
         <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,13 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".ui.CadastroUsuarioActivity"/>
-
-        <activity android:name=".ui.DataPesagemActivity"/>
-
-
-
+        <activity android:name=".ui.CadastroUsuarioActivity" />
+        <activity android:name=".ui.DataPesagemActivity" />
     </application>
 
 </manifest>

@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import com.example.primeiroapp.R
 import com.example.primeiroapp.calcularImc
+import com.example.primeiroapp.respository.PesagemRepository
 import com.example.primeiroapp.util.autenticar
 import com.example.primeiroapp.util.calcularIdade
 import java.time.LocalDate
@@ -23,7 +24,7 @@ lateinit var altura : TextView
 lateinit var dataNascimento : TextView
 lateinit var peso : TextView
 lateinit var cardPesagem : CardView
-//lateinit var cardNovaPesagem : CardView
+lateinit var cardHistorico : CardView
 
 class DashboardActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +39,7 @@ class DashboardActivity : AppCompatActivity() {
         altura = findViewById<TextView>(R.id.altura_dash)
         peso = findViewById<TextView>(R.id.peso_dash)
         cardPesagem = findViewById<CardView>(R.id.card_peso_dash)
-//        cardNovaPesagem = findViewById<CardView>()
+        cardHistorico = findViewById<CardView>(R.id.card_historico)
 
         carregarDashboard()
 
@@ -46,6 +47,12 @@ class DashboardActivity : AppCompatActivity() {
             val intent = Intent(this, DataPesagemActivity::class.java)
             startActivity(intent)
         }
+
+        cardHistorico.setOnClickListener {
+            val intent = Intent(this, HistoricoActivity::class.java)
+            startActivity(intent)
+        }
+
 
 
     }
@@ -62,9 +69,9 @@ class DashboardActivity : AppCompatActivity() {
         altura.text = dados.getFloat("altura", 0.0F).toString()
 
         dataNascimento.text = calcularIdade(dados.getString("dataNascimento", "")!!).toString()
-
-        peso.text= dados.getInt("peso", 0).toString()
-
+//
+//        val peso = dados.getInt("peso", 0)
+//        val pessos = peso.split()
 
     }
 
